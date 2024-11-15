@@ -1,0 +1,907 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+main,
+html,
+body {
+  background-color: #e5e5e5;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  float: right;
+  font-size: 25px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center; /* optional: center the buttons horizontally */
+  align-items: center;
+}
+
+nav button {
+  flex: 1; /* make the buttons flexible */
+  margin: 10px;
+}
+
+.navBtn {
+  border: none;
+  background-color: transparent;
+  color: grey;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.navBtn:hover {
+  color: grey;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+}
+
+#login {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+}
+
+.loginBtn {
+  border: 2px solid;
+  padding: 2px 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: grey;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+
+#guest {
+  margin-top: -10px;
+  color: black;
+  text-decoration: underline;
+}
+
+#email,
+#name,
+#message {
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+}
+
+#message {
+  width: 100%;
+  height: 105px;
+  resize: none;
+  border: 1px solid #bfbfbf;
+  overflow-y: scroll;
+}
+
+.home:hover {
+  color: grey;
+}
+
+/* Introduction */
+.inner {
+  display: flex;
+  margin: 35px;
+  position: relative;
+}
+
+.intro {
+  position: relative;
+  margin: 35px;
+  padding: 10px;
+  width: 65%;
+  background-color: #e5e5e5;
+  line-height: 2.5rem;
+}
+
+.resumeBtn {
+  position: relative;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  color: #333;
+  left: 42px;
+  top: -30px;
+  height: 45px;
+  width: 210px;
+  background-color: #4dff88;
+}
+
+.resumeBtn i {
+  margin-right: 10px;
+}
+.resumeBtn:hover {
+  box-shadow: -2px 2px 7px 5px #d9d9d9;
+}
+
+.heading {
+  text-align: center;
+  border-bottom: 5px solid;
+  margin: 10px 25px;
+}
+
+.port-card {
+  height: 350px;
+  margin: 35px auto;
+  padding: 10px;
+  width: 375px;
+}
+
+.port-img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+.port-img img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+.port-name-title {
+  text-align: center;
+  height: 65px;
+  width: 75%;
+  position: relative;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+}
+
+/* Projects */
+
+.project-header {
+  text-align: center;
+  border-bottom: 5px solid black;
+  margin: 20px 20px;
+  /* color: #0d47a1; */
+}
+
+/* These are the cards on the homepage */
+#grid-container {
+  display: flex;
+  width: 75%;
+  margin: 10px auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.project-cards {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: -0px 0px 10px 3px #bfbfbf;
+  background-color: white;
+}
+
+.project-cards:hover {
+  color: black;
+  box-shadow: -0px 0px 15px 8px #bfbfbf;
+}
+
+.card-image {
+  height: 250px;
+  width: 100%;
+  background-size: contain;
+  border-bottom: 1px solid;
+}
+
+.card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid;
+}
+
+.card-content {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.card-content h3 {
+  margin: 0;
+  background-color: #fff;
+}
+
+.card-content p {
+  font-size: 10px;
+  background-color: #fff;
+}
+
+.outer-link {
+  position: relative;
+  top: 45px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.link {
+  border: none;
+  color: #333;
+  background-color: #2196f3;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 7px;
+}
+
+.link:hover {
+  color: white;
+}
+
+#na:hover {
+  color: white;
+  cursor: not-allowed;
+}
+
+#loggedInCards {
+  color: black;
+  text-decoration: none;
+}
+
+/* Update form */
+.update-form {
+  margin: 10px;
+  padding: 10px;
+}
+
+.update-form input,
+textarea {
+  border: none;
+}
+
+.updateBtn {
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+  width: 200px;
+  height: 55px;
+  border: none;
+  border-radius: 7px;
+  background-color: #4dff88;
+}
+
+#project-description {
+  resize: none;
+  width: 100%;
+}
+
+/* Dashboard Cards */
+.greeting {
+  text-align: center;
+}
+
+#card-container {
+  margin: 30px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  max-width: 100vw;
+}
+
+.card {
+  border: 2px solid black !important;
+  border-left: none !important;
+  border-right: none !important;
+  /* box-shadow: 0px 0px 10px 5px #b3b3b3; */
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  overflow: hidden;
+  flex-basis: 25%;
+  flex-grow: 1;
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+  margin: 2px 0;
+  color: black;
+  text-decoration: none;
+  height: 315px;
+  width: 100%;
+  z-index: 0;
+}
+
+.card:hover {
+  color: grey;
+}
+
+/* Dashboard user options */
+.user-options {
+  border: 1px solid;
+  height: 300px;
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-options a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #4dff88;
+  margin: 10px 0;
+}
+
+.user-options a:hover {
+  color: white;
+}
+/* Contact Form */
+
+.bottom {
+  margin: 50px 175px;
+  display: flex;
+}
+
+.email-me {
+  text-align: center;
+  width: 50%;
+}
+
+.email-me h3 {
+  margin-top: 105px;
+}
+
+.email-me a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #2196f3;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  position: relative;
+  border-radius: 7px;
+  left: 25%;
+  top: 15px;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+#emailAddress,
+#name,
+#message {
+  border-radius: 0;
+  border-bottom: 1px solid !important;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  width: 90%;
+  max-width: 800px;
+  background-color: #fff;
+}
+
+#message {
+  width: 90%;
+  max-width: 800px;
+  height: 105px;
+  resize: none;
+  border: 1px solid #bfbfbf;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+
+.submitBtn {
+  width: 90%;
+  height: 45px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+}
+
+.img img {
+  height: 250px;
+  min-width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.info {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 35vh;
+  align-items: center;
+}
+
+.col-md-6 {
+  border: 1px solid #bfbfbf;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 5px;
+  border: 1px solid #bfbfbf;
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Dashboard Single Inquiries */
+
+.main {
+  border: 1px solid;
+  height: auto;
+  width: 800px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: white;
+}
+
+.name {
+  border-bottom: 1px solid;
+}
+
+.email {
+  margin-top: 10px;
+}
+
+.message {
+  border: 1px solid;
+  height: 200px;
+  margin-top: 30px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.buttons {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttons button {
+  border: none;
+  width: 300px;
+  height: 45px;
+  background-color: #4dff88;
+  border-radius: 7px;
+}
+
+/* This is the delete button on the single project page */
+
+.deleteBtn {
+  position: absolute;
+  top: 90px;
+  right: 15px;
+  width: 150px;
+  height: 35px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+
+/* Adding new project */
+
+.form {
+  margin: 10px;
+}
+
+.form input {
+  outline: none;
+  border: none;
+}
+
+.form h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#project_description {
+  resize: none;
+  width: 100%;
+  height: 150px;
+  border: none;
+  outline: none;
+}
+
+.add-new-button {
+  width: 200px;
+  height: 55px;
+  background-color: #4dff88;
+  border: none;
+  border-radius: 7px;
+  margin-top: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer {
+  border-top: 1px solid;
+}
+
+@media screen and (min-aspect-ratio: 21/9) {
+  body {
+    max-width: 1700px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .port-card {
+    left: 30%;
+  }
+
+  .main {
+    position: absolute;
+    top: 300px;
+  }
+
+  .buttons {
+    top: 510px;
+  }
+}
+
+@media only screen and (max-width: 2048px) {
+  .intro {
+    width: 800px;
+  }
+
+  .port-card {
+    width: 220px;
+    left: 30%;
+  }
+
+  .port-img,
+  .port-img img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .intro {
+    width: 800px;
+  }
+
+  .port-card {
+    width: 450px;
+    margin-top: 7px;
+  }
+
+  .port-img,
+  .port-img img {
+    width: 320px;
+    height: 320px;
+  }
+
+  #grid-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .intro {
+    width: 800px;
+  }
+
+  .port-img,
+  .port-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .project-cards {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .inner {
+    flex-direction: column-reverse;
+  }
+
+  .intro {
+    margin: 20px auto;
+  }
+
+  .inner button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .project-cards {
+    width: 100%;
+  }
+
+  .card-image {
+    height: 220px;
+  }
+
+  .card-image img {
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .intro {
+    width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  #card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex-basis: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .port-name-title {
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    float: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  nav button {
+    font-size: 12px;
+    padding-top: 15px;
+  }
+
+  #login {
+    top: 330px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .loginBtn {
+    top: 5px;
+    right: 20px;
+  }
+
+  .project-cards {
+    width: 100%;
+    height: 315px;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+
+  .card-image img {
+    height: 150px;
+  }
+
+  .outer-link {
+    top: -2px;
+  }
+
+  .link {
+    padding: 7px;
+  }
+
+  #na {
+    font-size: 13px;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 5%;
+    left: 50%;
+    top: 50px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    margin: 0;
+    width: 100vw;
+  }
+
+  .email-me {
+    width: 100%;
+    height: 175px;
+    margin-top: 20px;
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .email-me h3 {
+    margin-top: 20px;
+  }
+
+  #message {
+    height: 150px;
+  }
+
+  .submitBtn {
+    height: 35px;
+  }
+
+  .login-container {
+    display: block;
+    margin: 20px;
+  }
+
+  .landing-container {
+    height: auto;
+  }
+
+  .main-card {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .img img {
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .intro {
+    width: 81%;
+    text-align: center;
+  }
+
+  .info {
+    height: auto;
+  }
+
+  .col-md-6 {
+    width: 100%;
+    position: static;
+    margin: 10px 0;
+  }
+
+  #card-container a {
+    width: 100%;
+  }
+
+  .card {
+    height: 300px;
+    flex-basis: auto;
+    max-width: 95%;
+  }
+
+  .main {
+    width: 95%;
+  }
+
+  .buttons button {
+    margin-top: 50px;
+  }
+
+  /* Single Project */
+  .main-area {
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+
+  .image {
+    position: relative;
+    left: 47%;
+    transform: translateX(-50%);
+  }
+
+  .deleteBtn {
+    position: static;
+    margin-top: 10px;
+    width: 275px;
+    height: 45px;
+    border-radius: 7px;
+  }
+
+  .description-area {
+    text-align: center;
+  }
+
+  .description-area h1 {
+    margin-top: 1px;
+  }
+
+  /* Success Page */
+  .success,
+  .failure {
+    width: 350px !important;
+    font-size: 14px;
+  }
+
+  .failure h2 {
+    font-size: 19px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .buttons button {
+    width: 150px;
+  }
+
+  .port-card {
+    width: 200px;
+    height: 250px;
+  }
+
+  .port-img,
+  .port-img img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .port-name-title {
+    font-size: 13px;
+  }
+}
